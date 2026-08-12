@@ -43,3 +43,23 @@ Random Forest ML Model
 Prediction
   ↓
 React Result Dashboard
+
+## CI/CD Pipeline
+
+Developer
+   ↓
+Git Push
+   ↓
+GitHub Repository
+   ↓
+GitHub Actions
+   ↓
+Run Tests
+   ↓
+Build Docker Image
+   ↓
+Build Frontend
+   ↓
+Deploy to Render
+   ↓
+Live Application
