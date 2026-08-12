@@ -26,6 +26,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://student-performance-cicd-1.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -96,15 +97,12 @@ def predict(student: StudentInput):
         student.previous_marks,
     ]]
 
-    # Predict performance
     prediction_number = model.predict(input_data)[0]
 
-    # Convert numeric prediction back to text
     prediction = label_encoder.inverse_transform(
         [prediction_number]
     )[0]
 
-    # Get prediction probabilities
     probabilities = model.predict_proba(input_data)[0]
 
     confidence = float(max(probabilities))
