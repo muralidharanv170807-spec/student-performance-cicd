@@ -1,31 +1,45 @@
-# Student Performance CI/CD
+# AI-Based Student Performance Prediction System
 
-AI-based student performance prediction system with React, FastAPI, Scikit-learn, Docker, and GitHub Actions.
+An AI-based web application that predicts student academic performance using machine learning and provides an automated CI/CD pipeline using GitHub Actions, Docker, and Render.
 
-## Project structure
+## Live Application
 
-- `frontend/` - React frontend
-- `backend/` - FastAPI backend and saved ML model
-- `ml/` - model training and preprocessing
-- `dataset/` - training dataset
-- `.github/workflows/` - CI/CD workflow
-- `Dockerfile` - backend container
-- `docker-compose.yml` - local development orchestration
+Frontend:
+https://student-performance-cicd-1.onrender.com
 
-## Getting started
+Backend API:
+https://student-performance-cicd.onrender.com
 
-### Backend
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn app:app --reload
-```
+API Documentation:
+https://student-performance-cicd.onrender.com/docs
 
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
+## Project Overview
 
-The ML training script can later be used to generate `backend/model/student_model.pkl`.
+The system accepts five student performance parameters:
+
+- Attendance
+- Internal Marks
+- Assignment Percentage
+- Study Hours
+- Previous Marks
+
+The trained machine learning model predicts the student's performance as:
+
+- Good
+- Average
+- Poor
+
+## Architecture
+
+```text
+User
+  ↓
+React Frontend
+  ↓
+FastAPI REST API
+  ↓
+Random Forest ML Model
+  ↓
+Prediction
+  ↓
+React Result Dashboard
