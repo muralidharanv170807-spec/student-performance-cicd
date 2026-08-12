@@ -26,7 +26,6 @@ jobs:
         run: pip install -r backend/requirements.txt
 
       - name: Run backend tests
-        working-directory: backend
         run: pytest
 
       - name: Build Docker image
@@ -35,7 +34,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
 
       - name: Install frontend dependencies
         working-directory: frontend
