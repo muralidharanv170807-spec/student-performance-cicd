@@ -62,22 +62,8 @@ The main objectives of this project are:
 
 ## 🏗️ System Architecture
 
-flowchart TD
-    A[User] --> B[React Frontend]
-    B --> C[Render Static Site]
-    C --> D[FastAPI REST API]
-    D --> E[Random Forest ML Model]
-    E --> F[Prediction + Confidence]
-    F --> B
+<img width="990" height="2097" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/b12ba979-31df-44ff-b778-caac25435a1a" />
 
-    G[Developer] --> H[GitHub Repository]
-    H --> I[GitHub Actions]
-    I --> J[Run Pytest]
-    J --> K[Build Docker Image]
-    K --> L[Build React Frontend]
-    L --> M[Render Deployment]
-    M --> C
-    M --> D
 
 ## 🤖 Machine Learning
 
