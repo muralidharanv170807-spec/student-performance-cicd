@@ -181,6 +181,7 @@ CI Success
 Render Auto Deploy
     ↓
 Live Application
+```
 
 ## 🐳 Docker
 
@@ -190,13 +191,13 @@ The FastAPI backend is containerized using Docker.
 
 ```bash
 docker build -t student-performance-api .
-```
+
 
 ### Run the container
 
 ```bash
 docker run -d --name student-performance-container -p 8000:8000 student-performance-api
-```
+
 
 ### Check running containers
 
