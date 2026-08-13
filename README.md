@@ -62,8 +62,6 @@ The main objectives of this project are:
 
 ## 🏗️ System Architecture
 
-## 🏗️ System Architecture
-
 ```mermaid
 flowchart LR
     A[Developer] --> B[GitHub]
@@ -78,7 +76,7 @@ flowchart LR
     H --> I[Random Forest ML Model]
     I --> J[Prediction]
     J --> G
-
+```
 ## 🤖 Machine Learning
 
 ### Input Features
