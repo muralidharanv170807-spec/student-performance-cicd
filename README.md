@@ -62,8 +62,22 @@ The main objectives of this project are:
 
 ## 🏗️ System Architecture
 
-<img width="990" height="2097" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/b12ba979-31df-44ff-b778-caac25435a1a" />
+## 🏗️ System Architecture
 
+```mermaid
+flowchart LR
+    A[Developer] --> B[GitHub]
+    B --> C[GitHub Actions]
+    C --> D[Pytest]
+    D --> E[Docker Build]
+    E --> F[Render]
+
+    U[User] --> G[React Frontend]
+    F --> G
+    G --> H[FastAPI API]
+    H --> I[Random Forest ML Model]
+    I --> J[Prediction]
+    J --> G
 
 ## 🤖 Machine Learning
 
