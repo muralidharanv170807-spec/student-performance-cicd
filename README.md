@@ -62,41 +62,22 @@ The main objectives of this project are:
 
 ## 🏗️ System Architecture
 
-```text
-                    ┌──────────────────────┐
-                    │        User          │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   React Frontend     │
-                    │      Vite            │
-                    └──────────┬───────────┘
-                               │
-                               │ HTTP POST /predict
-                               ▼
-                    ┌──────────────────────┐
-                    │   FastAPI Backend    │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Random Forest Model  │
-                    │   Scikit-learn       │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │ Prediction Result    │
-                    │ Performance +        │
-                    │ Confidence            │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   React Dashboard    │
-                    └──────────────────────┘
-```
+flowchart TD
+    A[User] --> B[React Frontend]
+    B --> C[Render Static Site]
+    C --> D[FastAPI REST API]
+    D --> E[Random Forest ML Model]
+    E --> F[Prediction + Confidence]
+    F --> B
+
+    G[Developer] --> H[GitHub Repository]
+    H --> I[GitHub Actions]
+    I --> J[Run Pytest]
+    J --> K[Build Docker Image]
+    K --> L[Build React Frontend]
+    L --> M[Render Deployment]
+    M --> C
+    M --> D
 
 ---
 
