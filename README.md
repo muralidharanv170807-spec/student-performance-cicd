@@ -79,57 +79,28 @@ flowchart LR
 ```
 ## 🤖 Machine Learning
 
+### Dataset
+
+The project uses a dataset containing **500 student records**.
+
 ### Input Features
 
-The model uses these five features:
+The model takes the following five inputs:
 
-```text
-attendance
-internal_marks
-assignment_percentage
-study_hours
-previous_marks
-```
+| Feature | Description |
+|---|---|
+| Attendance | Student attendance percentage |
+| Internal Marks | Internal examination marks |
+| Assignment Percentage | Assignment completion percentage |
+| Study Hours | Average study hours per day |
+| Previous Marks | Previous academic marks |
 
 ### Target
 
+The target variable is:
+
 ```text
 performance
-```
-
-The target contains:
-
-```text
-Good
-Average
-Poor
-```
-
-### Model
-
-The project uses:
-
-**Random Forest Classifier**
-
-The dataset contains **500 student records** and **6 columns**:
-
-```text
-5 input features + 1 target column
-```
-
-### Model Accuracy
-
-The trained model achieved:
-
-```text
-Accuracy: 84.00%
-```
-
-on the test split used during development.
-
-> Note: Model performance may vary if the dataset, preprocessing, split, or model configuration is changed.
-
----
 
 ## 📊 Example Prediction
 
