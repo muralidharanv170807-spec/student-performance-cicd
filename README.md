@@ -742,3 +742,19 @@ Cloud Deployment
 ```
 
 The project demonstrates a complete software lifecycle from **machine learning model development to automated testing, containerization, CI/CD, and cloud deployment**.
+
+
+
+## 📸 Project Screenshots
+
+### Live Student Performance Predictor
+
+![Student Performance Predictor](screenshots/frontend.png)
+
+### GitHub Actions CI Pipeline
+
+![GitHub Actions CI Pipeline](screenshots/github-actions.png)
+
+### Render Deployment
+
+![Render Deployment](screenshots/render-deployment.png)
