@@ -79,8 +79,6 @@ flowchart TD
     M --> C
     M --> D
 
----
-
 ## 🤖 Machine Learning
 
 ### Input Features
