@@ -155,63 +155,32 @@ Expected result:
 
 ## 🔄 CI/CD Pipeline
 
-Every push to the `main` branch triggers the GitHub Actions workflow.
+This project uses **GitHub Actions** for Continuous Integration and **Render** for Continuous Deployment.
 
 ### Pipeline Flow
 
 ```text
-Developer
-    │
-    ▼
+Code Change
+    ↓
 Git Push
-    │
-    ▼
+    ↓
 GitHub Repository
-    │
-    ▼
+    ↓
 GitHub Actions
-    │
-    ├── Checkout Repository
-    │
-    ├── Setup Python
-    │
-    ├── Install Backend Dependencies
-    │
-    ├── Run Pytest
-    │
-    ├── Build Docker Image
-    │
-    ├── Setup Node.js
-    │
-    ├── Install Frontend Dependencies
-    │
-    └── Build React Frontend
-    │
-    ▼
-Render Deployment
-    │
-    ├── Backend Deployment
-    │
-    └── Frontend Deployment
-    │
-    ▼
+    ↓
+Install Dependencies
+    ↓
+Run Pytest
+    ↓
+Build Docker Image
+    ↓
+Build React Frontend
+    ↓
+CI Success
+    ↓
+Render Auto Deploy
+    ↓
 Live Application
-```
-
-### CI
-
-**Continuous Integration** automatically:
-
-* Installs dependencies
-* Runs backend tests
-* Builds the Docker image
-* Builds the React frontend
-
-### CD
-
-**Continuous Deployment** automatically deploys new changes to Render after changes are pushed to the `main` branch.
-
----
 
 ## 🐳 Docker
 
